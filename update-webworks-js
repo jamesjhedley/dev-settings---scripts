@@ -1,0 +1,14 @@
+if [[ -f "./webworks-1.0.0.7.js" ]] ; then
+    #File named properly already, proceed with updating webworks.1.0.0.7.js file
+    zip ~/apps/APISmokeTest-new.zip ./webworks-1.0.0.7.js
+else
+    #Create temp file with proper name to replace webworks-1.0.0.7.js file in zip
+    cp ./webworks-* ./webworks-1.0.0.7.js
+
+    #Update webworks.1.0.0.7.js file
+    zip ~/apps/APISmokeTest-new.zip ./webworks-1.0.0.7.js
+
+    #Remove temp file
+    rm ./webworks-1.0.0.7.js
+fi
+

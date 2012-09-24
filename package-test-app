@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#if buildId specified, sign app
+if [[ -z "$1" ]] ; then
+    ./bbwp ~/apps/APISmokeTest-new.zip -o ~/bin -d
+else
+    ./bbwp ~/apps/APISmokeTest-new.zip -o ~/bin -d -g password --buildId $1
+fi
+
